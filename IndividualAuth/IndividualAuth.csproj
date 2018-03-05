@@ -2,10 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeFrameworkVersion>2.1.0-preview1-26115-03</RuntimeFrameworkVersion>
-    <NETStandardImplicitPackageVersion>2.0.1</NETStandardImplicitPackageVersion>
-    <UserSecretsId>aspnet-IndividualAuth-8315ED85-6B5F-46D3-B814-8701429DE750</UserSecretsId>
-    <RestoreSources>
+    <UserSecretsId>aspnet-IndividualAuth-09C64567-78A1-42A5-AC02-C8936C1F58B6</UserSecretsId>
+<RestoreSources>
       $(RestoreSources);
       https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json;
       https://dotnet.myget.org/F/aspnetcore-tools/api/v3/index.json;
@@ -37,9 +35,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.0-preview2-30187" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.0-preview2-30187" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.1.0-preview2-30187" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0-preview2-030502" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0-preview2-030506" PrivateAssets="All" />
   </ItemGroup>
-
 
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
