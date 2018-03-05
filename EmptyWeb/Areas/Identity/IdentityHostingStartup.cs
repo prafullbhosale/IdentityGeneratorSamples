@@ -22,8 +22,21 @@ namespace EmptyWeb.Areas.Identity
 
                 services.AddIdentity<IdentityUser, IdentityRole>()
                     .AddEntityFrameworkStores<EmptyWebIdentityDbContext>()
-                   .AddDefaultUI()
                    .AddDefaultTokenProviders();
+                services.AddMvc()
+                    .AddRazorPagesOptions(options =>
+                    {
+                        options.AllowAreas = true;
+                        options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
+                        options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
+                    });
+
+                services.ConfigureApplicationCookie(options => 
+                {
+                    options.LoginPath = "/Identity/Account/Login";
+                    options.LogoutPath = "/Identity/Account/Logout";
+                    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+                });
             });
         }
     }
